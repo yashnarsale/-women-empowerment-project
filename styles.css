@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap");
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --accent: #d1d1d1;
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --accent-color: #d1d1d1;
+    --btn-color: #4CAF50;
+    --btn-hover: #45a049;
+}
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    background: var(--white);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 6rem;
+    width: auto;
+}
+
+header .navbar {
+    display: flex;
+}
+
+header .navbar a {
+    font-size: 1.8rem;
+    margin-left: 2.5rem;
+    color: var(--black);
+    font-weight: 600;
+}
+
+header .navbar a:hover {
+    color: var(--btn-color);
+}
+
+#menu-bar {
+    font-size: 3rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 5rem 7%;
+    min-height: 100vh;
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    padding: 1rem;
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 0.3rem;
+    background: var(--btn-color);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.home .content {
+    max-width: 50%;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    line-height: 1.2;
+}
+
+.home .content p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+    line-height: 1.6;
+}
+
+.home .image {
+    max-width: 45%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.home .image img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2rem);
+    }
+}
+
+.motive {
+    background: #f9f9f9;
+}
+
+.motive .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.motive .box {
+    background: var(--white);
+    flex: 1 1 30rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.motive .box:hover {
+    transform: translateY(-1rem);
+}
+
+.motive .box img {
+    height: 15rem;
+    margin-bottom: 2rem;
+}
+
+.motive .box h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.motive .box p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.services {
+    background: var(--black);
+}
+
+.services .heading {
+    color: var(--white);
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.services .box {
+    padding: 3rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.services .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.services .box img {
+    height: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+.services .box h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.services .box p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.about {
+    background: #f9f9f9;
+}
+
+.about .content {
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about .content h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--black);
+}
+
+.about .content p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contact .row .map {
+    flex: 1 1 40rem;
+    height: 50rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.contact .row .map iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact .row form .inputBox {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contact .row form .inputBox input,
+.contact .row form .inputBox textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #333;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    text-transform: none;
+}
+
+.contact .row form .inputBox textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.contact .row form .inputBox label {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.6rem;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.contact .row form .inputBox input:focus ~ label,
+.contact .row form .inputBox textarea:focus ~ label,
+.contact .row form .inputBox input:valid ~ label,
+.contact .row form .inputBox textarea:valid ~ label {
+    top: -1rem;
+    left: 0;
+    font-size: 1.4rem;
+    color: var(--btn-color);
+    background: var(--white);
+    padding: 0 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--btn-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--btn-hover);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background: var(--black);
+    padding: 3rem 0;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer .box {
+    flex: 1 1 25rem;
+    padding: 2rem;
+}
+
+.footer .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .box p,
+.footer .box a {
+    font-size: 1.5rem;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.footer .box a:hover {
+    color: var(--btn-color);
+    padding-left: 0.5rem;
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #999;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bar {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 1rem 2rem;
+        display: none;
+        animation: fadeIn 0.5s ease;
+    }
+
+    header .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .navbar a {
+        margin: 1.5rem 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10rem;
+    }
+
+    .home .content {
+        max-width: 100%;
+    }
+
+    .home .image {
+        max-width: 80%;
+        margin-top: 3rem;
+    }
+
+    .contact .row {
+        flex-direction: column;
+    }
+
+    .contact .row .map {
+        height: 30rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
